@@ -1,0 +1,5 @@
+{
+  "name": "BillParser AI",
+  "description": "Upload PDF or image bills to automatically extract the biller name, billing period, and total amount using Gemini AI.",
+  "requestFramePermissions": []
+}
