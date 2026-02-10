@@ -158,7 +158,7 @@ export const BillHistory: React.FC<BillHistoryProps> = ({ bills, onSelectBill, g
                               <span className="bg-slate-200 text-slate-600 text-[10px] px-2 py-0.5 rounded-full font-medium">{group.items.length}</span>
                           </div>
                           <div className="text-sm font-semibold text-slate-600">
-                              Total: <span className="text-slate-900">${group.total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                              Total: <span className="text-slate-900">Rs. {group.total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                           </div>
                       </div>
                       <div className="overflow-x-auto">

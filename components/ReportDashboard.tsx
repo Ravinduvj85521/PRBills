@@ -135,7 +135,7 @@ export const ReportDashboard: React.FC<ReportDashboardProps> = ({ bills }) => {
         <div className="bg-white p-3 border border-slate-100 shadow-lg rounded-lg z-50">
           <p className="text-xs font-semibold text-slate-700 mb-1">{label || payload[0].name}</p>
           <p className="text-sm font-bold text-indigo-600">
-            {Number(payload[0].value).toLocaleString(undefined, { style: 'currency', currency: 'LKR' })}
+            Rs. {Number(payload[0].value).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </p>
         </div>
       );
@@ -324,7 +324,7 @@ export const ReportDashboard: React.FC<ReportDashboardProps> = ({ bills }) => {
                         <span className="text-sm font-medium text-slate-700">{bill.billName}</span>
                         <span className="text-[10px] text-slate-400">{bill.dateOfPeriod}</span>
                      </div>
-                     <span className="text-sm font-bold text-slate-900">${bill.amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                     <span className="text-sm font-bold text-slate-900">Rs. {bill.amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                  </div>
              ))}
              {chartData.length === 0 && <p className="text-sm text-slate-400 italic py-4 text-center">No data available</p>}
